@@ -1,4 +1,5 @@
 import http from 'utils/http';
+import { initSentry } from 'utils/sentryDSN';
 
 import * as interceptors from 'commons/interceptors';
 
@@ -20,4 +21,5 @@ function initInterceptors() {
 
 export default function init() {
   initInterceptors();
+  initSentry();
 }
